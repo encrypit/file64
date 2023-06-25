@@ -4,6 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/file64.svg)](https://www.npmjs.com/package/file64)
 [![build](https://github.com/encrypit/file64/actions/workflows/build.yml/badge.svg)](https://github.com/encrypit/file64/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/encrypit/file64/branch/master/graph/badge.svg?token=IKmG72W8c6)](https://codecov.io/gh/encrypit/file64)
 
 Convert [Base64](https://developer.mozilla.org/docs/Glossary/Base64) to [Blob](https://javascript.info/blob)/File and Blob/File to Base64.
 
