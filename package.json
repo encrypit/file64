@@ -1,7 +1,7 @@
 {
-  "name": "npm-package-typescript-template",
+  "name": "file64",
   "version": "1.0.0-alpha",
-  "description": "npm package TypeScript template",
+  "description": "Convert Base64 to Blob/File and Blob/File to Base64.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,13 +29,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/remarkablemark/npm-package-typescript-template"
+    "url": "https://github.com/encrypit/file64"
   },
   "bugs": {
-    "url": "https://github.com/remarkablemark/npm-package-typescript-template/issues"
+    "url": "https://github.com/encrypit/file64/issues"
   },
   "keywords": [
-    "npm-package-typescript-template"
+    "base64",
+    "base64-to-blob",
+    "base64-to-file",
+    "blob",
+    "blob-to-base64",
+    "decode",
+    "encode",
+    "file",
+    "file-to-base64"
   ],
   "devDependencies": {
     "@commitlint/cli": "17.6.6",
