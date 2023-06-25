@@ -1,0 +1,55 @@
+name: build
+on: [push, pull_request]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint commit message
+        run: npx commitlint --from=HEAD~1
+
+      - name: Lint codebase
+        run: npm run lint
+
+      - name: Check type
+        run: npm run lint:tsc
+
+      - name: Run unit tests
+        run: npm run test:ci
+
+      - name: Run module tests
+        run: npm run test:module
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3
+
+      - name: Build package
+        run: npm run build
+
+      - name: Generate docs
+        run: npm run docs
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs
