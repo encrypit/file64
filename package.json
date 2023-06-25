@@ -1,6 +1,6 @@
 {
   "name": "file64",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Convert Base64 to Blob/File and Blob/File to Base64.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "lib/index.js",
