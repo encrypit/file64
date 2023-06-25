@@ -1,5 +1,8 @@
-import * as index from './index';
+import { base64ToBlob, base64ToFile, blobToBase64, fileToBase64 } from '.';
 
-it('exports object', () => {
-  expect(index).toEqual({});
-});
+it.each([base64ToBlob, base64ToFile, blobToBase64, fileToBase64])(
+  'exports %p',
+  (func) => {
+    expect(func).toBeInstanceOf(Function);
+  }
+);

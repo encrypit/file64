@@ -10,8 +10,28 @@ const config: Config = {
       statements: 100,
     },
   },
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  projects: [
+    {
+      displayName: 'jsdom',
+      preset: 'ts-jest',
+      testEnvironment: 'jsdom',
+      testPathIgnorePatterns: [
+        '/node_modules/',
+        'base64-to-blob',
+        'base64-to-file',
+      ],
+    },
+    {
+      displayName: 'node',
+      preset: 'ts-jest',
+      testEnvironment: 'node',
+      testPathIgnorePatterns: [
+        '/node_modules/',
+        'base64-to-file',
+        'file-to-base64',
+      ],
+    },
+  ],
 };
 
 export default config;
