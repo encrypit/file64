@@ -11,7 +11,7 @@
 export async function base64ToFile(
   base64: string,
   filename: string,
-  options?: FilePropertyBag
+  options?: FilePropertyBag,
 ): Promise<File> {
   const response = await fetch(base64);
   const blob = await response.blob();

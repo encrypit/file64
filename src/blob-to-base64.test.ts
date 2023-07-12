@@ -8,14 +8,14 @@ describe('blobToBase64', () => {
   it('converts empty Blob without type to Base64', async () => {
     const blob = new Blob([]);
     expect(await blobToBase64(blob)).toBe(
-      'data:application/octet-stream;base64,'
+      'data:application/octet-stream;base64,',
     );
   });
 
   it('converts Blob without type to Base64', async () => {
     const blob = new Blob(['a']);
     expect(await blobToBase64(blob)).toBe(
-      'data:application/octet-stream;base64,YQ=='
+      'data:application/octet-stream;base64,YQ==',
     );
   });
 

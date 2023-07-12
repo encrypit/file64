@@ -8,7 +8,7 @@ describe('base64ToFile', () => {
   it('converts Base64 with no data to File', async () => {
     const file = await base64ToFile(
       'data:application/octet-stream;base64,',
-      ''
+      '',
     );
     expect(file).toBeInstanceOf(File);
   });
@@ -34,7 +34,7 @@ describe('base64ToFile', () => {
     const file = await base64ToFile(
       'data:application/octet-stream;base64,YQ==',
       '',
-      { type: 'text/plain ' }
+      { type: 'text/plain ' },
     );
     expect(file.type).toBe('text/plain');
   });
