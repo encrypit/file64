@@ -3,18 +3,18 @@
   "version": "1.0.1",
   "description": "Convert Base64 to Blob/File and Blob/File to Base64.",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
   "module": "module/index.mjs",
   "exports": {
-    "types": "./lib/index.d.ts",
+    "types": "./cjs/index.d.ts",
     "import": "./module/index.mjs",
-    "require": "./lib/index.js"
+    "require": "./cjs/index.js"
   },
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "clean": "rm -rf coverage docs lib",
+    "clean": "rm -rf cjs coverage docs",
     "docs": "typedoc",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
@@ -67,7 +67,7 @@
     "typescript": "5.1.6"
   },
   "files": [
-    "lib/",
+    "cjs/",
     "module/"
   ],
   "engines": {
