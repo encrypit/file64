@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/encrypit/file64/compare/v1.0.1...v1.0.2) (2023-07-12)
+
+
+### Build System
+
+* rename directory `module` to `esm` ([a066d72](https://github.com/encrypit/file64/commit/a066d721d106168bbd6bce386aaeee104278ab17))
+
 ## [1.0.1](https://github.com/encrypit/file64/compare/v1.0.0...v1.0.1) (2023-06-25)
 
 
