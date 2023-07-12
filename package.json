@@ -3,28 +3,28 @@
   "version": "1.0.1",
   "description": "Convert Base64 to Blob/File and Blob/File to Base64.",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "module": "module/index.mjs",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
   "exports": {
-    "types": "./lib/index.d.ts",
-    "import": "./module/index.mjs",
-    "require": "./lib/index.js"
+    "import": "./esm/index.js",
+    "require": "./cjs/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc --module nodenext --outDir esm",
     "build:watch": "tsc --watch",
-    "clean": "rm -rf coverage docs lib",
+    "clean": "rm -rf cjs coverage docs esm",
     "docs": "typedoc",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
     "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable && npm run lint && npm run lint:tsc && npm run test:ci && npm run clean && npm run build",
+    "prepublishOnly": "pinst --disable && npm run lint && npm run lint:tsc && npm run test:ci && npm run test:esm && npm run clean && npm run build",
     "test": "jest",
     "test:ci": "CI=true jest --ci --colors --coverage",
-    "test:module": "npm run build && node --test module",
+    "test:esm": "npm run build:esm && node --test src",
     "test:watch": "jest --watch"
   },
   "repository": {
@@ -67,8 +67,8 @@
     "typescript": "5.1.6"
   },
   "files": [
-    "lib/",
-    "module/"
+    "cjs/",
+    "esm/"
   ],
   "engines": {
     "node": ">=18"
