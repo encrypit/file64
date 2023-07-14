@@ -16,7 +16,7 @@
     "build:watch": "tsc --watch",
     "clean": "rm -rf cjs coverage docs esm",
     "docs": "typedoc",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.mjs,.ts .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
