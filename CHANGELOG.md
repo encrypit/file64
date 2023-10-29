@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/encrypit/file64/compare/v1.0.2...v1.0.3) (2023-10-29)
+
+
+### Build System
+
+* **package:** specify "types", remove "esm/" dir, & add "src/" to files ([4fc58c3](https://github.com/encrypit/file64/commit/4fc58c340727da4edb123d1cadbb3f0df093ed26))
+
 ## [1.0.2](https://github.com/encrypit/file64/compare/v1.0.1...v1.0.2) (2023-07-12)
 
 
