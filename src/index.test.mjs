@@ -7,7 +7,7 @@ import {
   base64ToFile,
   blobToBase64,
   fileToBase64,
-} from '../esm/index.js';
+} from '../cjs/index.js';
 
 describe('index', () => {
   it('exports base64ToBlob', () => {
