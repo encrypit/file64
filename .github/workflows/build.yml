@@ -21,12 +21,12 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --prefer-offline
 
       - name: Lint commit message
         run: npx commitlint --from=HEAD~1
 
-      - name: Lint codebase
+      - name: Run ESLint
         run: npm run lint
 
       - name: Check type
@@ -35,11 +35,11 @@ jobs:
       - name: Run unit tests
         run: npm run test:ci
 
-      - name: Run module tests
-        run: npm run test:esm
-
       - name: Codecov
         uses: codecov/codecov-action@v3
+
+      - name: Run module tests
+        run: npm run test:esm
 
       - name: Build package
         run: npm run build
