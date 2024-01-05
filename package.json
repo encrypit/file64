@@ -40,7 +40,7 @@
     "file-to-base64"
   ],
   "devDependencies": {
-    "@commitlint/cli": "18.4.3",
+    "@commitlint/cli": "18.4.4",
     "@commitlint/config-conventional": "18.4.3",
     "@types/jest": "29.5.11",
     "@types/node": "20.10.6",
