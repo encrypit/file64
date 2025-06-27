@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.4 (2025-06-27)
+
+
+### Continuous Integration
+
+* **github:** publish package to npm registry with provenance ([e526db7](https://github.com/encrypit/file64/commit/e526db77f6d8aeefe3a5374f3f37359361d61e52))
+
 ## [1.0.4](https://github.com/encrypit/file64/compare/v1.0.3...v1.0.4) (2024-09-05)
 
 ### Continuous Integration
