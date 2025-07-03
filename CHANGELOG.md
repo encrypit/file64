@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.5](https://github.com/encrypit/file64/compare/v1.0.4...v1.0.5) (2025-07-03)
+
+### Miscellaneous Chores
+
+- release 1.0.5 ([9ccee67](https://github.com/encrypit/file64/commit/9ccee67aef311381d1c8ec448982f8f0162d30e2))
+
 ## [1.0.4](https://github.com/encrypit/file64/compare/v1.0.3...v1.0.4) (2024-09-05)
 
 ### Continuous Integration
