@@ -13,6 +13,7 @@ const config: Config = {
   projects: [
     {
       displayName: 'jsdom',
+      moduleFileExtensions: ['js', 'ts'],
       preset: 'ts-jest',
       testEnvironment: 'jsdom',
       testPathIgnorePatterns: [
@@ -23,6 +24,7 @@ const config: Config = {
     },
     {
       displayName: 'node',
+      moduleFileExtensions: ['js', 'ts'],
       preset: 'ts-jest',
       testEnvironment: 'node',
       testPathIgnorePatterns: [
@@ -32,6 +34,10 @@ const config: Config = {
       ],
     },
   ],
+  reporters:
+    process.env.CI === 'true'
+      ? [['github-actions', { silent: false }], 'summary']
+      : undefined,
 };
 
 export default config;
