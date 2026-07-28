@@ -13,9 +13,6 @@ const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
 export default defineConfig([
   includeIgnoreFile(gitignorePath),
 
-  js.configs.recommended,
-  tseslint.configs.recommended,
-
   {
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -23,6 +20,8 @@ export default defineConfig([
       prettier,
       tsdoc,
     },
+
+    extends: [js.configs.recommended, tseslint.configs.recommended],
 
     languageOptions: {
       globals: {
