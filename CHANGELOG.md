@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.6](https://github.com/encrypit/file64/compare/v1.0.5...v1.0.6) (2026-07-28)
+
+### Continuous Integration
+
+- **github:** migrate to trusted publishing (OIDC) in release-please.yml ([d15c6e7](https://github.com/encrypit/file64/commit/d15c6e735c155e7f928ebd774e5b0c28ec516746))
+
 ## [1.0.5](https://github.com/encrypit/file64/compare/v1.0.4...v1.0.5) (2025-07-03)
 
 ### Miscellaneous Chores
