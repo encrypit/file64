@@ -54,7 +54,7 @@
     "jest-environment-jsdom": "30.5.2",
     "lint-staged": "17.5.1",
     "prettier": "3.9.9",
-    "ts-jest": "29.4.12",
+    "ts-jest": "29.4.13",
     "ts-node": "10.9.2",
     "typedoc": "0.28.20",
     "typescript": "5.9.3",
